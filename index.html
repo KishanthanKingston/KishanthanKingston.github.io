@@ -2,14 +2,61 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishanthan Kingston</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f2f2f2;
             color: #333;
         }
+
+        /* NAVBAR */
+
+        .navbar {
+            background: white;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-name {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .nav-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0077cc;
+        }
+
+        /* MAIN CONTAINER */
 
         .container {
             display: flex;
@@ -18,7 +65,7 @@
             background: white;
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         .left {
@@ -36,8 +83,41 @@
             margin-bottom: 20px;
         }
 
-        .left h2 {
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        .title {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .info {
             margin-top: 20px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .info p {
+            margin: 12px 0;
+            font-size: 15px;
+        }
+
+        .info i {
+            width: 22px;
+            margin-right: 10px;
+            color: #444;
+        }
+
+        .info a {
+            color: #333;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .info a:hover {
+            color: #0077cc;
+            transform: translateX(3px);
         }
 
         .right {
@@ -45,104 +125,113 @@
             padding-left: 40px;
         }
 
-        h1 {
-            margin-top: 0;
+        section {
+            margin-bottom: 60px;
         }
 
-        a {
-            color: #0077cc;
+        h1 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        /* PUBLICATIONS */
+
+        .publication {
+            margin-bottom: 35px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .pub-title a {
+            color: #6a0dad;
             text-decoration: none;
         }
 
-        a:hover {
+        .pub-title a:hover {
             text-decoration: underline;
         }
 
-        .title {
-            color: #555;
-            margin-bottom: 20px;
+        .pub-year {
+            font-size: 13px;
+            color: #999;
+            font-weight: 500;
         }
-        
-        .info {
-            margin-top: 20px;
-            text-align: left;
-            display: inline-block;
-        }
-        
-        .info p {
-            margin: 12px 0;
-            font-size: 15px;
-        }
-        
-        .info i {
-            width: 22px;
-            margin-right: 10px;
+
+        .pub-authors {
+            font-size: 14px;
             color: #444;
-        }
-        
-        .info a {
-            color: #333;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        
-        .info a:hover {
-            color: #0077cc;
-            transform: translateX(3px);
+            margin: 5px 0;
         }
 
-        /* NAVBAR */
-        
-        .navbar {
-            background: white;
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .pub-venue {
+            font-size: 14px;
+            color: #666;
         }
-        
-        .nav-container {
-            max-width: 1000px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+        .pub-pages {
+            font-size: 13px;
+            color: #888;
         }
-        
-        .nav-name {
-            font-weight: 600;
-            font-size: 18px;
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 25px;
+            }
+
+            .left {
+                width: 100%;
+                border-right: none;
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .right {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .info {
+                text-align: center;
+            }
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+            }
         }
-        
-        .nav-links a {
-            margin-left: 25px;
-            text-decoration: none;
-            color: #555;
-            font-size: 15px;
-            transition: 0.2s;
-        }
-        
-        .nav-links a:hover {
-            color: #0077cc;
-        }
-                
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <span class="nav-name">Kishanthan Kingston</span>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#publications">Publications</a>
-                <a href="#cv">CV</a>
-            </div>
-        </div>
-    </nav>
-    
 </head>
+
 <body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <span class="nav-name">Kishanthan Kingston</span>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#publications">Publications</a>
+            <a href="#cv">CV</a>
+        </div>
+    </div>
+</nav>
 
 <div class="container">
 
@@ -150,29 +239,30 @@
         <img src="KishanthanKingston.jpg" alt="Profile Photo">
         <h2>Kishanthan Kingston</h2>
         <p class="title">AI/ML Research Engineer</p>
+
         <div class="info">
             <p><i class="fas fa-location-dot"></i> Chelles, France</p>
-        
+
             <p>
-                <a href="https://github.com/KishanthanKingston" target="_blank">
+                <a href="https://github.com/KishanthanKingston" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </p>
-        
+
             <p>
-                <a href="https://www.linkedin.com/in/kishanthankingston/" target="_blank">
+                <a href="https://www.linkedin.com/in/kishanthankingston/" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
             </p>
-        
+
             <p>
-                <a href="https://scholar.google.com/citations?user=KO7HgFEAAAAJ&hl=fr&oi=ao" target="_blank">
+                <a href="https://scholar.google.com/citations?user=KO7HgFEAAAAJ&hl=fr&oi=ao" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-graduation-cap"></i> Google Scholar
                 </a>
             </p>
-        
+
             <p>
-                <a href="https://orcid.org/0009-0009-8882-6096" target="_blank">
+                <a href="https://orcid.org/0009-0009-8882-6096" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-orcid"></i> ORCID
                 </a>
             </p>
@@ -180,19 +270,66 @@
     </div>
 
     <div class="right">
-        <h1>About Me</h1>
-        <p>
-            Passionate about AI and Technological Innovation, I explore how Artificial Intelligence can transform our world.
 
-        </p>
+        <section id="about">
+            <h1>About Me</h1>
+            <p>
+                Passionate about AI and Technological Innovation, I explore how Artificial Intelligence can transform our world.
+            </p>
+            <p>
+                Currently working as a Research Engineer in Artificial Intelligence and Machine Learning at IPSL – Institut Pierre-Simon Laplace.
+            </p>
+            <p>
+                Graduated with a Master’s degree in Automation and Robotics from Sorbonne University, specializing in Intelligent Systems.
+            </p>
+        </section>
 
-        <p>
-            Currently working as a Research Engineer in Artificial Intelligence and Machine Learning at IPSL – Institut Pierre-Simon Laplace, I focus on climate downscaling to improve the resolution of global climate models using deep learning techniques.
-        </p>
+        <section id="publications">
+            <h1>Publications</h1>
 
-        <p>
-            Graduated with a Master’s degree in Automation and Robotics from Sorbonne University, specializing in Intelligent Systems, I have developed in-depth expertise in Deep Learning and Computer Vision through hands-on projects and applied research.
-        </p>
+            <div class="publication">
+                <div class="pub-header">
+                    <p class="pub-title">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            Semantic Video Diffusion Models for Long Echocardiogram Generation
+                        </a>
+                    </p>
+                    <span class="pub-year">2025</span>
+                </div>
+                <p class="pub-authors">
+                    Abdelkhalak Chetoui, Ewan Evain, <strong>Kishanthan Kingston</strong>, Uxio Hermida, Hernán G Morales
+                </p>
+                <p class="pub-venue">
+                    International Conference on Functional Imaging and Modeling of the Heart (Springer Nature Switzerland)
+                </p>
+                <p class="pub-pages">Pages: 242–252</p>
+            </div>
+
+            <div class="publication">
+                <div class="pub-header">
+                    <p class="pub-title">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            FRI-050-YI Development of a screening tool for covert hepatic encephalopathy through automated speech signal analysis in patients with chronic liver diseases
+                        </a>
+                    </p>
+                    <span class="pub-year">2024</span>
+                </div>
+                <p class="pub-authors">
+                    Apolline Leproux, Lyès Kheloufi, <strong>Kishanthan Kingston</strong>, Philippe Sultanik, Sarah Mouri, et al.
+                </p>
+                <p class="pub-venue">
+                    Journal of Hepatology (Elsevier), Volume 80
+                </p>
+                <p class="pub-pages">Page: S207</p>
+            </div>
+
+        </section>
+
+        <section id="cv">
+            <h1>CV</h1>
+            <p><a href="cv.pdf" target="_blank" rel="noopener noreferrer">Download my CV</a></p>
+        </section>
+
     </div>
 
 </div>
