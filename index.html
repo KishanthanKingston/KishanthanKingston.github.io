@@ -90,9 +90,57 @@
             color: #0077cc;
             transform: translateX(3px);
         }
+
+        /* NAVBAR */
         
+        .navbar {
+            background: white;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-name {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .nav-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: #0077cc;
+        }
+                
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="nav-name">Kishanthan Kingston</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+                <a href="#cv">CV</a>
+            </div>
+        </div>
+    </nav>
+    
 </head>
 <body>
 
@@ -103,7 +151,7 @@
         <h2>Kishanthan Kingston</h2>
         <p class="title">AI/ML Research Engineer</p>
         <div class="info">
-            <p><i class="fas fa-location-dot"></i> Paris, France</p>
+            <p><i class="fas fa-location-dot"></i> Chelles, France</p>
         
             <p>
                 <a href="https://github.com/KishanthanKingston" target="_blank">
