@@ -6,7 +6,6 @@
 ## 🔗 Live Website
 👉 https://kishanthankingston.github.io/
 
----
 
 ## 👨‍💻 About
 
@@ -19,7 +18,6 @@ It presents my:
 - Curriculum Vitae
 - Academic background
 
----
 
 ## 📚 Research Interests
 
@@ -30,7 +28,6 @@ It presents my:
 - Signal Processing
 - AI for Healthcare
 
----
 
 ## 🛠 Technologies Used
 
@@ -39,7 +36,6 @@ It presents my:
 - JavaScript
 - GitHub Pages
 
----
 
 ## 📁 Project Structure
 
@@ -57,7 +53,6 @@ It presents my:
 └── README.md
 ```
 
----
 
 ## 📄 License
 
