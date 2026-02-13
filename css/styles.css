@@ -15,7 +15,7 @@ html, body {
     --text-heading: #111827;
     --accent: #4f46e5;
     --border-color: #e5e7eb;
-    transition: var(--transition);
+    --transition: all 0.3s ease;
 }
 
 /* DARK MODE */
