@@ -243,18 +243,24 @@
         /* RESPONSIVE */
 
         @media (max-width: 768px) {
+            body {
+                overflow: auto;
+                height: auto;
+            }
+        
             .container {
-                flex-direction: column;
-                padding: 25px;
+                height: auto;
+                overflow: hidden;
             }
-
-            .left, .right {
-                width: 100%;
-                padding: 0;
-                border: none;
+        
+            .right {
+                overflow: visible;
             }
-
-            .left { margin-bottom: 30px; }
+        
+            .left {
+                position: relative;
+                height: auto;
+            }
 
             .info { text-align: center; }
 
@@ -275,9 +281,9 @@
     <div class="nav-container">
         <span class="nav-name">Kishanthan Kingston</span>
         <div class="nav-links">
-            <a class="tab-link active" onclick="openTab('about', this)">About</a>
-            <a class="tab-link" onclick="openTab('publications', this)">Publications</a>
-            <a class="tab-link" onclick="openTab('cv', this)">CV</a>
+            <a href="#" class="tab-link active" onclick="openTab('about', this); return false;">About</a>
+            <a href="#" class="tab-link" onclick="openTab('publications', this); return false;">Publications</a>
+            <a href="#" class="tab-link" onclick="openTab('cv', this); return false;">CV</a>
         </div>
     </div>
 </nav>
