@@ -7,13 +7,35 @@ html, body {
     height: 100%;
 }
 
+:root {
+    --bg-main: #f2f2f2;
+    --bg-card: #ffffff;
+    --bg-sidebar: #f9fafb;
+    --text-main: #333333;
+    --text-heading: #111827;
+    --accent: #4f46e5;
+    --border-color: #e5e7eb;
+    transition: var(--transition);
+}
+
+/* DARK MODE */
+body.dark-mode {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --bg-sidebar: #111827;
+    --text-main: #e5e7eb;
+    --text-heading: #ffffff;
+    --accent: #818cf8;
+    --border-color: #334155;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+    background-color: var(--bg-main);
+    color: var(--text-main);
     line-height: 1.6;
     overflow: hidden;
 }
@@ -25,8 +47,8 @@ p {
 /* NAVBAR */
 
 .navbar {
-    background: white;
-    border-bottom: 1px solid #eee;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -50,18 +72,19 @@ p {
 .nav-links a {
     margin-left: 25px;
     text-decoration: none;
-    color: #555;
+    color: var(--text-main);
+    opacity: 0.8;
     font-size: 15px;
-    transition: color 0.2s ease;
+    transition: var(--transition);
     cursor: pointer;
 }
 
 .nav-links a:hover {
-    color: #4f46e5;
+    color: var(--accent);
 }
 
 .tab-link.active {
-    color: #4f46e5;
+    color: var(--accent);
     font-weight: 600;
 }
 
@@ -97,7 +120,7 @@ p {
     padding: 40px 30px;
     height: 100%;
     overflow: hidden;
-    background: #f9fafb;
+    background: var(--bg-sidebar);
 }
 
 .left img {
@@ -107,7 +130,7 @@ p {
     object-fit: cover;
     margin-bottom: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
+    transition: var(--transition);
 }
 
 .left img:hover {
@@ -115,7 +138,7 @@ p {
 }
 
 .title {
-    color: #666;
+    color: var(--text-main);
     margin-bottom: 20px;
 }
 
@@ -133,17 +156,18 @@ p {
 .info i {
     width: 22px;
     margin-right: 10px;
-    color: #444;
+    color: var(--text-main);
+    opacity: 0.8;
 }
 
 .info a {
-    color: #333;
+    color: var(--text-main);
     text-decoration: none;
-    transition: 0.2s;
+    transition: var(--transition);
 }
 
 .info a:hover {
-    color: #4f46e5;
+    color: var(--accent);
     transform: translateX(3px);
 }
 
@@ -152,8 +176,12 @@ p {
     padding: 60px;
     height: 100%;
     overflow-y: auto;
-    background: white;
+    background: var(--bg-card);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+body, .left, .right, .navbar {
+    transition: var(--transition);
 }
 
 section { 
@@ -163,13 +191,13 @@ section {
 h1 {
     font-size: 30px;
     margin-bottom: 20px;
-    color: #1f2937;
+    color: var(--text-heading);
 }
 
 h2 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #111827;
+    color: var(--text-heading);
 }
 
 /* TABS */
@@ -192,11 +220,11 @@ h2 {
     margin-bottom: 25px;
     padding: 18px;
     border-radius: 10px;
-    transition: background 0.2s ease;
+    transition: var(--transition);
 }
 
 .publication:hover {
-    background: #f9fafb;
+    background: var(--bg-sidebar);
 }
 
 .pub-header {
@@ -210,7 +238,7 @@ h2 {
 }
 
 .pub-title a {
-    color: #4f46e5;
+    color: var(--accent);
     text-decoration: none;
 }
 
@@ -218,7 +246,8 @@ h2 {
 
 .pub-year {
     font-size: 13px;
-    color: #999;
+    color: var(--text-main);
+    opacity: 0.6;
 }
 
 .pub-authors, .pub-venue, .pub-pages {
@@ -231,11 +260,11 @@ h2 {
 .cv-button {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #4f46e5;
+    background-color: var(--accent);
     color: white;
     border-radius: 6px;
     text-decoration: none;
-    transition: 0.2s;
+    transition: var(--transition);
 }
 
 .cv-button:hover {
@@ -252,7 +281,8 @@ h2 {
 
 .cv-meta {
     font-size: 14px;
-    color: #777;
+    color: var(--text-main);
+    opacity: 0.6;
     margin-bottom: 10px;
 }
 
@@ -261,7 +291,7 @@ h2 {
     margin-top: 30px;
     margin-bottom: 15px;
     font-weight: 600;
-    color: #222;
+    color: var(--text-heading);
 }
 
 .custom-list {
