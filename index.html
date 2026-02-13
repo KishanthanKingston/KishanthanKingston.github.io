@@ -70,19 +70,20 @@
 
         .container {
             display: flex;
-            max-width: 1000px;
-            margin: 50px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            max-width: 1200px;
+            margin: 0 auto;
+            height: calc(100vh - 70px);
         }
 
         .left {
             width: 30%;
             text-align: center;
             border-right: 1px solid #eee;
-            padding-right: 30px;
+            padding: 40px 30px;
+            position: sticky;
+            top: 70px; /* hauteur navbar */
+            height: calc(100vh - 70px);
+            overflow: hidden;
         }
 
         .left img {
@@ -128,7 +129,8 @@
 
         .right {
             width: 70%;
-            padding-left: 40px;
+            padding: 40px;
+            overflow-y: auto;
         }
 
         section { margin-bottom: 40px; }
