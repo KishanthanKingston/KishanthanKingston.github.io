@@ -342,6 +342,19 @@ h2 {
     }
 }
 
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
 .footer {
     text-align: center;
     padding: 20px;
