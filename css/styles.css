@@ -6,6 +6,7 @@ body {
     background-color: #f2f2f2;
     color: #333;
     line-height: 1.6;
+    overflow: hidden;
 }
 
 p {
@@ -79,15 +80,13 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     min-height: calc(100vh - 70px);
-    gap: 40px;
 }
 
 .left {
     width: 30%;
     text-align: center;
-    border-right: 1px solid #eee;
     padding: 40px 30px;
-    position: sticky;
+    position: fixed;
     top: 70px;
     height: auto;
     min-height: calc(100vh - 70px);
@@ -144,10 +143,11 @@ p {
 
 .right {
     width: 70%;
-    padding: 50px;
+    margin-left: 30%;
+    padding: 60px 60px;
+    height: calc(100vh - 70px);
     overflow-y: auto;
     background: white;
-    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
@@ -283,6 +283,9 @@ h2 {
     }
 
     .right {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
         overflow: visible;
     }
 
@@ -290,6 +293,7 @@ h2 {
         position: relative;
         height: auto;
         min-height: auto;
+        top: 0;
     }
 
     .info { text-align: center; }
