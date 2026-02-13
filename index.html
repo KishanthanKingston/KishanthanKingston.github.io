@@ -66,6 +66,23 @@
             font-weight: 600;
         }
 
+        /* Hide scrollbar but keep scrolling */
+
+        /* Chrome, Safari */
+        .right::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Firefox */
+        .right {
+            scrollbar-width: none;
+        }
+        
+        /* Internet Explorer / Edge */
+        .right {
+            -ms-overflow-style: none;
+        }
+
         /* MAIN CONTAINER */
 
         .container {
