@@ -1,7 +1,7 @@
 # Kishanthan Kingston
 
-🌍 Personal academic and professional website  
-🔬 AI/ML Research Engineer specialized in Deep Learning, Computer Vision, and Climate Modeling  
+Personal academic and professional website  
+AI/ML Research Engineer specialized in Deep Learning, Computer Vision, and Climate Modeling  
 
 ## 🔗 Live Website
 👉 https://kishanthankingston.github.io/
