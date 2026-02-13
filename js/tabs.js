@@ -1,18 +1,18 @@
 function openTab(tabId, element) {
 
-    // Hide all tab contents
-    document.querySelectorAll('.tab-content').forEach(section => {
-        section.classList.remove('active');
-    });
+    const sections = document.querySelectorAll('.tab-content');
+    const links = document.querySelectorAll('.tab-link');
 
-    // Remove active class from all nav links
-    document.querySelectorAll('.tab-link').forEach(link => {
-        link.classList.remove('active');
-    });
+    sections.forEach(section => section.classList.remove('active'));
+    links.forEach(link => link.classList.remove('active'));
 
-    // Show selected tab
-    document.getElementById(tabId).classList.add('active');
+    const selectedTab = document.getElementById(tabId);
 
-    // Highlight clicked link
-    element.classList.add('active');
+    if (selectedTab) {
+        selectedTab.classList.add('active');
+    }
+
+    if (element) {
+        element.classList.add('active');
+    }
 }
