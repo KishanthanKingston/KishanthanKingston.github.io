@@ -42,7 +42,6 @@ It presents my:
 ---
 
 ## 📁 Project Structure
-## 📁 Project Structure
 
 ```
 .
