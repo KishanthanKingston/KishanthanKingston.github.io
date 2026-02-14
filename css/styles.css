@@ -313,8 +313,8 @@ h2 {
     }
 
     .container {
+        flex-direction: column;
         height: auto;
-        overflow: hidden;
     }
 
     .right {
