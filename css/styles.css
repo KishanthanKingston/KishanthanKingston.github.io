@@ -318,17 +318,17 @@ h2 {
     }
 
     .right {
-        width: 100%;
-        margin-left: 0;
+        width: 100%;             
         height: auto;
         overflow: visible;
+        padding: 40px 20px;
     }
 
     .left {
-        position: relative;
+        width: 100%;         
         height: auto;
-        min-height: auto;
-        top: 0;
+        overflow: visible;
+        padding: 30px 20px;
     }
 
     .info { text-align: center; }
