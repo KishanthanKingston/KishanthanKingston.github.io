@@ -365,21 +365,20 @@ h2 {
 
 .lang-switch {
     margin-left: 15px;
-    padding: 4px 8px;
-    border-radius: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;
     border: 1px solid var(--border-color);
-    opacity: 0.8;
+    opacity: 0.6;
     transition: var(--transition);
 }
 
 .lang-switch:hover {
-    background: var(--accent);
-    color: var(--accent-contrast);
+    opacity: 1;
     border-color: var(--accent);
-    opacity: 0.5;
+    color: var(--accent);
 }
 
 .footer {
