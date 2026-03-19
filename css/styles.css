@@ -450,3 +450,19 @@ h2 {
     object-fit: contain;
     animation: fadeIn 0.2s ease;
 }
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
