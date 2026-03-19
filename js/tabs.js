@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // ======================
+    // TABS
+    // ======================
     function openTab(tabId, element) {
-
         const sections = document.querySelectorAll('.tab-content');
         const links = document.querySelectorAll('.tab-link');
 
@@ -21,11 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.openTab = openTab;
 
+    // ======================
     // DARK MODE
+    // ======================
     const toggleBtn = document.getElementById("theme-toggle");
 
     if (toggleBtn) {
-
         if (localStorage.getItem("theme") === "dark") {
             document.body.classList.add("dark-mode");
             toggleBtn.textContent = "☀️";
@@ -44,14 +47,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // LIGHTBOX
-    const photos = document.querySelectorAll('.photo');
+    // ======================
+    // LIGHTBOX + CAROUSEL
+    // ======================
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.lightbox-close');
+    const nextBtn = document.querySelector('.lightbox-next');
+    const prevBtn = document.querySelector('.lightbox-prev');
 
-    photos.forEach(photo => {
+    const photosArray = Array.from(document.querySelectorAll('.photo'));
+    let currentIndex = 0;
+
+    // OPEN IMAGE
+    photosArray.forEach((photo, index) => {
         photo.addEventListener('click', () => {
+            currentIndex = index;
             lightbox.classList.add('active');
             lightboxImg.src = photo.src;
             lightboxImg.alt = photo.alt;
@@ -59,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // CLOSE (click outside)
     if (lightbox) {
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
@@ -68,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // CLOSE (button)
     if (closeBtn) {
         closeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -75,5 +88,47 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.overflow = "";
         });
     }
+
+    // NEXT
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % photosArray.length;
+            lightboxImg.src = photosArray[currentIndex].src;
+            lightboxImg.alt = photosArray[currentIndex].alt;
+        });
+    }
+
+    // PREVIOUS
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + photosArray.length) % photosArray.length;
+            lightboxImg.src = photosArray[currentIndex].src;
+            lightboxImg.alt = photosArray[currentIndex].alt;
+        });
+    }
+
+    // KEYBOARD NAVIGATION
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+
+        if (e.key === 'ArrowRight') {
+            currentIndex = (currentIndex + 1) % photosArray.length;
+            lightboxImg.src = photosArray[currentIndex].src;
+            lightboxImg.alt = photosArray[currentIndex].alt;
+        }
+
+        if (e.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + photosArray.length) % photosArray.length;
+            lightboxImg.src = photosArray[currentIndex].src;
+            lightboxImg.alt = photosArray[currentIndex].alt;
+        }
+
+        if (e.key === 'Escape') {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = "";
+        }
+    });
 
 });
