@@ -48,28 +48,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const photos = document.querySelectorAll('.photo');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
 
     photos.forEach(photo => {
         photo.addEventListener('click', () => {
             lightbox.classList.add('active');
             lightboxImg.src = photo.src;
+            lightboxImg.alt = photo.alt;
+            document.body.style.overflow = "hidden";
         });
     });
 
     if (lightbox) {
-        lightbox.addEventListener('click', () => {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = "";
+            }
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             lightbox.classList.remove('active');
+            document.body.style.overflow = "";
         });
     }
 
 });
-
-const closeBtn = document.querySelector('.lightbox-close');
-
-if (closeBtn) {
-    closeBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // empêche de déclencher le click global
-        lightbox.classList.remove('active');
-        document.body.style.overflow = "";
-    });
-}
