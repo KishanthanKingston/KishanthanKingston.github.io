@@ -40,6 +40,7 @@
             <a href="#" class="tab-link active" onclick="openTab('about', this); return false;">À propos</a>
             <a href="#" class="tab-link" onclick="openTab('publications', this); return false;">Publications</a>
             <a href="#" class="tab-link" onclick="openTab('cv', this); return false;">CV</a>
+            <a href="#" class="tab-link" onclick="openTab('photographie', this); return false;">Photographie</a>
 
           <!-- Language switch -->
           <a href="index.html" class="lang-switch">EN</a>
@@ -263,7 +264,31 @@
         
         </section>
 
+        <!-- PHOTOGRAPHY -->
+        <section id="photographie" class="tab-content">
+            <h1>Photographie</h1>
+        
+            <p>
+                La photographie est un intérêt personnel qui me permet d’explorer les motifs naturels, 
+                les structures et la lumière. Elle reflète ma curiosité pour les systèmes complexes et 
+                s’inscrit dans la continuité de mon approche scientifique en intelligence artificielle.
+            </p>
+        
+            <div class="photo-gallery">
+                <img class="photo" src="img/lake_mountain.jpeg" alt="Lac de montagne turquoise dans une vallée" loading="lazy">
+                <img class="photo" src="img/lake_mountain2.jpeg" alt="Vue d’un lac de montagne sous un autre angle" loading="lazy">
+                <img class="photo" src="img/mountain.jpeg" alt="Paysage de montagne avec brume" loading="lazy">
+                <img class="photo" src="img/rock_mountain.jpeg" alt="Terrain rocheux en montagne sous la lumière du soleil" loading="lazy">
+                <img class="photo" src="img/beach.jpeg" alt="Mer avec bateaux près de la côte" loading="lazy">
+                <img class="photo" src="img/field_tower.jpeg" alt="Champ avec barrière et tour" loading="lazy">
+            </div>
+        </section>
+
     </div>
+</div>
+
+<div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Image agrandie">
 </div>
 
 <script src="js/tabs.js"></script>
