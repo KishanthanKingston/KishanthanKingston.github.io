@@ -63,3 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+const closeBtn = document.querySelector('.lightbox-close');
+
+if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // empêche de déclencher le click global
+        lightbox.classList.remove('active');
+        document.body.style.overflow = "";
+    });
+}
