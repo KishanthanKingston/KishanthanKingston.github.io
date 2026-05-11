@@ -3,7 +3,7 @@
 Personal academic and professional website  
 AI/ML Research Engineer specialized in Deep Learning, Computer Vision, and Climate Modeling  
 
-## 🔗 Live Website
+## 🔗 Website
 👉 https://kishanthankingston.github.io/
 
 
