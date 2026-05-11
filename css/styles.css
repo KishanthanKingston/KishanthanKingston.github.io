@@ -130,6 +130,7 @@ p {
     height: 260px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center top;
     margin-bottom: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     transition: var(--transition);
@@ -556,6 +557,7 @@ p {
     height: 260px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center top;
     margin-bottom: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     transition: var(--transition);
