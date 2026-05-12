@@ -120,8 +120,7 @@ p {
     width: 30%;
     text-align: center;
     padding: 40px 30px;
-    height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
     background: var(--bg-sidebar);
 }
 
@@ -547,8 +546,7 @@ p {
     width: 30%;
     text-align: center;
     padding: 40px 30px;
-    height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
     background: var(--bg-sidebar);
 }
 
